@@ -6,7 +6,7 @@ namespace HelloYaul
     {
         static void Main(string[] args)
         {
-            Casdonsole.WriteLine("Hello World!");
+            Console.WriteLine("Hello World!");
         }
     }
 }
