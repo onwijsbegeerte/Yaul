@@ -1,0 +1,11 @@
+c:\Projects\Yaul\tests\HelloYaulTests\bin\Debug\netcoreapp1.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+c:\Projects\Yaul\tests\HelloYaulTests\bin\Debug\netcoreapp1.1\xunit.runner.utility.netstandard15.dll
+c:\Projects\Yaul\tests\HelloYaulTests\bin\Debug\netcoreapp1.1\xunit.runner.reporters.netstandard15.dll
+c:\Projects\Yaul\tests\HelloYaulTests\bin\Debug\netcoreapp1.1\HelloYaulTests.deps.json
+c:\Projects\Yaul\tests\HelloYaulTests\bin\Debug\netcoreapp1.1\HelloYaulTests.runtimeconfig.json
+c:\Projects\Yaul\tests\HelloYaulTests\bin\Debug\netcoreapp1.1\HelloYaulTests.runtimeconfig.dev.json
+c:\Projects\Yaul\tests\HelloYaulTests\bin\Debug\netcoreapp1.1\HelloYaulTests.dll
+c:\Projects\Yaul\tests\HelloYaulTests\bin\Debug\netcoreapp1.1\HelloYaulTests.pdb
+c:\Projects\Yaul\tests\HelloYaulTests\obj\Debug\netcoreapp1.1\HelloYaulTests.AssemblyInfo.cs
+c:\Projects\Yaul\tests\HelloYaulTests\obj\Debug\netcoreapp1.1\HelloYaulTests.dll
+c:\Projects\Yaul\tests\HelloYaulTests\obj\Debug\netcoreapp1.1\HelloYaulTests.pdb

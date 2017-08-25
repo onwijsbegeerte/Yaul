@@ -1,0 +1,8 @@
+c:\Projects\Yaul\src\HelloYaul\bin\Debug\netcoreapp1.1\HelloYaul.deps.json
+c:\Projects\Yaul\src\HelloYaul\bin\Debug\netcoreapp1.1\HelloYaul.runtimeconfig.json
+c:\Projects\Yaul\src\HelloYaul\bin\Debug\netcoreapp1.1\HelloYaul.runtimeconfig.dev.json
+c:\Projects\Yaul\src\HelloYaul\bin\Debug\netcoreapp1.1\HelloYaul.dll
+c:\Projects\Yaul\src\HelloYaul\bin\Debug\netcoreapp1.1\HelloYaul.pdb
+c:\Projects\Yaul\src\HelloYaul\obj\Debug\netcoreapp1.1\HelloYaul.AssemblyInfo.cs
+c:\Projects\Yaul\src\HelloYaul\obj\Debug\netcoreapp1.1\HelloYaul.dll
+c:\Projects\Yaul\src\HelloYaul\obj\Debug\netcoreapp1.1\HelloYaul.pdb
