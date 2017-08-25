@@ -35,7 +35,7 @@ test_script:
  # - cmd: dotnet restore ./tests/tests.csproj --verbosity m
   # run the unit tests (requires changing into the test directory)
   - cmd: cd tests
-  - cmd: cd HelloYalTests
+  - cmd: cd HelloYaulTests
   - cmd: dotnet test
 on_finish :
   # any cleanup in here
