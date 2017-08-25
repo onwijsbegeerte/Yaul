@@ -8,7 +8,7 @@ namespace HelloYaulTests
         [Fact]
         public void Test1()
         {
-
+            Assert.Equal("asd", "QWERT");
         }
     }
 }
