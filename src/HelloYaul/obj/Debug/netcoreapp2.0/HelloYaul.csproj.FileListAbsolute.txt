@@ -1,0 +1,10 @@
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/HelloYaul/bin/Debug/netcoreapp2.0/HelloYaul.deps.json
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/HelloYaul/bin/Debug/netcoreapp2.0/HelloYaul.runtimeconfig.json
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/HelloYaul/bin/Debug/netcoreapp2.0/HelloYaul.runtimeconfig.dev.json
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/HelloYaul/bin/Debug/netcoreapp2.0/HelloYaul.dll
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/HelloYaul/bin/Debug/netcoreapp2.0/HelloYaul.pdb
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/HelloYaul/obj/Debug/netcoreapp2.0/HelloYaul.csproj.CoreCompileInputs.cache
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/HelloYaul/obj/Debug/netcoreapp2.0/HelloYaul.AssemblyInfoInputs.cache
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/HelloYaul/obj/Debug/netcoreapp2.0/HelloYaul.AssemblyInfo.cs
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/HelloYaul/obj/Debug/netcoreapp2.0/HelloYaul.dll
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/HelloYaul/obj/Debug/netcoreapp2.0/HelloYaul.pdb
