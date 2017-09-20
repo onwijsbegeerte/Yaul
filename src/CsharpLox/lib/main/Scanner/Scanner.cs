@@ -2,8 +2,15 @@ using System.Collections.Generic;
 
 namespace main
 {
-    public class Scanner
+    public interface IScanner
     {
+        List<Token> tokens();
+    }
+    public class Scanner : IScanner
+    {
+        public Scanner(){
+            
+        }
         public Scanner(string source)
         {
             Source = source;
