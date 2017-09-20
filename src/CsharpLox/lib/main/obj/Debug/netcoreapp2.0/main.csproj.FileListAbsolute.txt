@@ -1,0 +1,10 @@
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/lib/main/bin/Debug/netcoreapp2.0/main.deps.json
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/lib/main/bin/Debug/netcoreapp2.0/main.runtimeconfig.json
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/lib/main/bin/Debug/netcoreapp2.0/main.runtimeconfig.dev.json
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/lib/main/bin/Debug/netcoreapp2.0/main.dll
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/lib/main/bin/Debug/netcoreapp2.0/main.pdb
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/lib/main/obj/Debug/netcoreapp2.0/main.csproj.CoreCompileInputs.cache
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/lib/main/obj/Debug/netcoreapp2.0/main.AssemblyInfoInputs.cache
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/lib/main/obj/Debug/netcoreapp2.0/main.AssemblyInfo.cs
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/lib/main/obj/Debug/netcoreapp2.0/main.dll
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/lib/main/obj/Debug/netcoreapp2.0/main.pdb

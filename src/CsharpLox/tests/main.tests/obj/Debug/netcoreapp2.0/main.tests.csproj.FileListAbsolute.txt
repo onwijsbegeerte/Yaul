@@ -1,0 +1,15 @@
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/tests/main.tests/obj/Debug/netcoreapp2.0/main.tests.csproj.CoreCompileInputs.cache
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/tests/main.tests/obj/Debug/netcoreapp2.0/main.tests.AssemblyInfoInputs.cache
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/tests/main.tests/obj/Debug/netcoreapp2.0/main.tests.AssemblyInfo.cs
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/tests/main.tests/bin/Debug/netcoreapp2.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/tests/main.tests/bin/Debug/netcoreapp2.0/xunit.runner.utility.netstandard15.dll
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/tests/main.tests/bin/Debug/netcoreapp2.0/xunit.runner.reporters.netstandard15.dll
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/tests/main.tests/bin/Debug/netcoreapp2.0/main.tests.deps.json
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/tests/main.tests/bin/Debug/netcoreapp2.0/main.tests.runtimeconfig.json
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/tests/main.tests/bin/Debug/netcoreapp2.0/main.tests.runtimeconfig.dev.json
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/tests/main.tests/bin/Debug/netcoreapp2.0/main.tests.dll
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/tests/main.tests/bin/Debug/netcoreapp2.0/main.tests.pdb
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/tests/main.tests/bin/Debug/netcoreapp2.0/main.dll
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/tests/main.tests/bin/Debug/netcoreapp2.0/main.pdb
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/tests/main.tests/obj/Debug/netcoreapp2.0/main.tests.dll
+/Users/mendelagterberg/Documents/Code/Yaul/Yaul/src/CsharpLox/tests/main.tests/obj/Debug/netcoreapp2.0/main.tests.pdb
