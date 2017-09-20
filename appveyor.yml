@@ -38,6 +38,11 @@ test_script:
   - cmd: cd HelloYaulTests
   - cmd: dotnet test
   - cmd: for /f %%a in ('dir /b /s *.csproj') do dotnet test %%a
-on_finish :
+  - cmd: cd..
+  - cmd: cd..
+  - cmd: cd src && cd CsharpLox && cd tests
+  - cmd: for /f %%a in ('dir /b /s *.csproj') do dotnet test %%a
+
+on_finish : 
   # any cleanup in here
 deploy: off
