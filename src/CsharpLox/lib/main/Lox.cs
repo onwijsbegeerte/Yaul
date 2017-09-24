@@ -3,20 +3,19 @@ using System.IO;
 
 namespace main
 {
-    public interface ILox{
+    public interface ILox
+    {
         void runPrompt();
         void runFile(string path);
         void Run(string source);
-        void error(int line, string message);
     }
-    public class Lox: ILox
+    public class Lox : ILox
     {
         private readonly IScanner _scanner;
         public Lox(IScanner scanner)
         {
             _scanner = scanner;
         }
-        public bool hadError { get; set; }
 
         public void runPrompt()
         {
@@ -27,7 +26,7 @@ namespace main
                 Console.WriteLine(">> ");
                 input = Console.ReadLine();
                 Run(input);
-                hadError = false;
+                ErrorLogger.hadError = false;
             }
         }
 
@@ -37,7 +36,7 @@ namespace main
             {
                 var bytes = File.ReadAllBytes(path);
                 Run(System.Text.Encoding.UTF8.GetString(bytes));
-                if (hadError) Environment.Exit(65);
+                if (ErrorLogger.hadError) Environment.Exit(65);
             }
             catch (System.IO.FileNotFoundException ex)
             {
@@ -47,21 +46,9 @@ namespace main
 
         public void Run(string source)
         {
-           
             var tokens = _scanner.tokens();
 
             tokens.ForEach(x => Console.WriteLine(x.Value));
-        }
-
-        public void error(int line, string message)
-        {
-            report(line, "", message);
-        }
-
-        private void report(int line, string where, string message)
-        {
-            Console.WriteLine($"Error at [line: {line}]   {where} :   {message}");
-            hadError = true;
         }
     }
 }

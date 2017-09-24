@@ -7,7 +7,7 @@ namespace main
     {
         static void Main(string[] args)
         {
-            Scanner scanner = new Scanner();
+            Scanner scanner = new Scanner("asd");
             Lox lox = new Lox(scanner);
 
             if (args.Length > 1)
