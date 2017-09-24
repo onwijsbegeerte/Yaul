@@ -37,11 +37,12 @@ namespace main.tests
         [Fact]
         public void Scanner_ShouldReportError_WithInvalidLexeme()
         {
-            var scanner = new Scanner("QWERTY");
+            var scanner = new Scanner("^^^");
 
             var result = scanner.tokens();
 
             Assert.Equal(true, ErrorLogger.hadError);
+            Assert.Equal(TokenType.EOF, result[0].TokenType);
         }
 
         [Theory]
