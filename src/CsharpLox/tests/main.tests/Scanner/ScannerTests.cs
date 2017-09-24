@@ -42,7 +42,6 @@ namespace main.tests
             var result = scanner.tokens();
 
             Assert.Equal(true, ErrorLogger.hadError);
-            Assert.Equal(TokenType.EOF, result[1].TokenType);
         }
 
         [Theory]
