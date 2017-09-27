@@ -46,6 +46,32 @@ namespace main.tests
         }
 
         [Theory]
+        [InlineData("\n")]
+        [InlineData("\r")]
+        [InlineData("     ")]
+        public void Scanner_ShouldNotCreateToken_WithNonTokenTypes(string input)
+        {
+            var scanner = new Scanner(input);
+
+            var result = scanner.tokens();
+
+            Assert.Equal(TokenType.EOF, result[0].TokenType);
+        }
+
+        
+        [Theory]
+        [InlineData("\"hello lox\"")]
+        public void Scanner_ShouldCreateToken_WithValidString(string input)
+        {
+            var scanner = new Scanner(input);
+            //Check if this works with encoded data
+            var result = scanner.tokens();
+
+            Assert.Equal(TokenType.STRING, result[0].TokenType);
+            Assert.Equal("hello lox", result[0].Literal);
+        }
+
+        [Theory]
         [InlineData("(", TokenType.L_PARAM)]
         [InlineData(")", TokenType.R_PARAM)]
         [InlineData("{", TokenType.L_BRACE)]
@@ -56,6 +82,15 @@ namespace main.tests
         [InlineData("+", TokenType.PLUS)]
         [InlineData(";", TokenType.SEMICOLON)]
         [InlineData("*", TokenType.STAR)]
+        [InlineData("!", TokenType.BANG)]
+        [InlineData("!=", TokenType.BANG_EQUAL)]
+        [InlineData("=", TokenType.EQUAL)]
+        [InlineData("==", TokenType.EQUAL_EQUAL)]
+        [InlineData("<=", TokenType.LESS_EQUAL)]
+        [InlineData(">", TokenType.GREATER)]
+        [InlineData("<", TokenType.LESS)]
+        [InlineData(">=", TokenType.GREATER_EQUAL)]
+        [InlineData("/", TokenType.SLASH)]
         public void Scanner_ShouldReturnRightTokenType_WithValidData(string input, TokenType expectedTokenType)
         {
             var scanner = new Scanner(input);

@@ -25,10 +25,10 @@ namespace main
         }
         public List<Token> tokens()
         {
-            if(Source.Length == 0)
+            if (Source.Length == 0)
                 return Tokens;
 
-                
+
             Start = 0;
             Current = 0;
             Line = 1;
@@ -58,10 +58,74 @@ namespace main
                 case '+': addToken(TokenType.PLUS); break;
                 case ';': addToken(TokenType.SEMICOLON); break;
                 case '*': addToken(TokenType.STAR); break;
+                case '"':
+                    extractString();
+                    break;
+                case '!': addToken(match('=') ? TokenType.BANG_EQUAL : TokenType.BANG); break;
+                case '=': addToken(match('=') ? TokenType.EQUAL_EQUAL : TokenType.EQUAL); break;
+                case '>': addToken(match('=') ? TokenType.GREATER_EQUAL : TokenType.GREATER); break;
+                case '<': addToken(match('=') ? TokenType.LESS_EQUAL : TokenType.LESS); break;
+                case '/':
+                    if ((match('/')))
+                    {
+                        while (peek() != '\n' && !isAtEnd())
+                        {
+                            advance();
+                        }
+                    }
+                    else
+                    {
+                        addToken(TokenType.SLASH);
+                    }
+                    break;
+                case ' ':
+                case '\r':
+                case '\t':
+
+                    break;
+                case '\n':
+                    Line++;
+                    break;
                 default:
                     ErrorLogger.Error(Line, "Unexpected character.");
                     break;
             }
+        }
+
+        private void extractString()
+        {
+            while (peek() != '"' && !isAtEnd())
+            {
+                if (peek() == '\n') Line++;
+                advance();
+            }
+            if (isAtEnd())
+            {
+                ErrorLogger.Error(Line, "Unterminated string");
+                return;
+            }
+
+            advance();
+
+            string value = Source.Substring(Start + 1, Current - 2);
+            addToken(TokenType.STRING, value);
+        }
+
+        private char peek()
+        {
+            if (isAtEnd()) return '\0';
+            return Source[Current];
+        }
+
+        private bool match(char expected)
+        {
+            if (isAtEnd()) return false;
+
+            if (this.Source[Current] != expected) return false;
+
+            Current++;
+
+            return true;
         }
 
         private char advance()
