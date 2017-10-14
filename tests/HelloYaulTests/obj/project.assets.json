@@ -5849,8 +5849,7 @@
     ]
   },
   "packageFolders": {
-    "/Users/mendelagterberg/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "/Users/mendelagterberg/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
@@ -5861,11 +5860,8 @@
       "packagesPath": "/Users/mendelagterberg/.nuget/packages/",
       "outputPath": "/Users/mendelagterberg/Documents/Code/Yaul/Yaul/tests/HelloYaulTests/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "/Users/mendelagterberg/.nuget/NuGet/NuGet.Config"
+        "/Users/mendelagterberg/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -5877,21 +5873,14 @@
         "netcoreapp2.0": {
           "projectReferences": {}
         }
-      },
-      "warningProperties": {
-        "warnAsError": [
-          "NU1605"
-        ]
       }
     },
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
           "Microsoft.NETCore.App": {
-            "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.0",
-            "autoReferenced": true
+            "version": "2.0.0"
           },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
