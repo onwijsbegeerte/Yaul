@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace main
 {
@@ -23,11 +24,11 @@ namespace main
             Source = source;
             Tokens = new List<Token>();
         }
+        
         public List<Token> tokens()
         {
             if (Source.Length == 0)
                 return Tokens;
-
 
             Start = 0;
             Current = 0;
@@ -87,9 +88,33 @@ namespace main
                     Line++;
                     break;
                 default:
+                    if (char.IsDigit(c))
+                    {
+                        number();
+                    }
                     ErrorLogger.Error(Line, "Unexpected character.");
                     break;
             }
+        }
+
+        private void number()
+        {
+            while (char.IsDigit(peek()))
+            {
+                advance();
+            }
+          
+            while (peek() == '.' && char.IsDigit(peekNext()))
+            {
+                advance();
+                
+                while (char.IsDigit(peek()))
+                {
+                    advance();
+                }
+            }
+            
+            addToken(TokenType.NUMBER, double.Parse(Source.Substring(Start, Current)));
         }
 
         private void extractString()
@@ -111,6 +136,12 @@ namespace main
             addToken(TokenType.STRING, value);
         }
 
+        private char peekNext()
+        {
+            if (isAtEnd()) return '\0';
+            return Source[Current + 1];
+        }
+        
         private char peek()
         {
             if (isAtEnd()) return '\0';
@@ -133,6 +164,7 @@ namespace main
             Current++;
             return Source[Current - 1];
         }
+        
         private void addToken(TokenType type)
         {
             addToken(type, null);

@@ -70,6 +70,20 @@ namespace main.tests
             Assert.Equal(TokenType.STRING, result[0].TokenType);
             Assert.Equal("hello lox", result[0].Literal);
         }
+        
+        [Theory]
+        [InlineData("5")]
+        [InlineData("12")]
+        [InlineData("12.1")]
+        [InlineData("0.12")]
+        public void Scanner_ShouldCreateToken_WithValidNumber(string input)
+        {
+            var scanner = new Scanner(input);
+            var result = scanner.tokens();
+
+            Assert.Equal(TokenType.NUMBER, result[0].TokenType);
+            Assert.Equal(double.Parse(input), double.Parse(result[0].Literal.ToString()));
+        }
 
         [Theory]
         [InlineData("(", TokenType.L_PARAM)]
@@ -91,6 +105,7 @@ namespace main.tests
         [InlineData("<", TokenType.LESS)]
         [InlineData(">=", TokenType.GREATER_EQUAL)]
         [InlineData("/", TokenType.SLASH)]
+        [InlineData("2", TokenType.NUMBER)]
         public void Scanner_ShouldReturnRightTokenType_WithValidData(string input, TokenType expectedTokenType)
         {
             var scanner = new Scanner(input);
