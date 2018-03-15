@@ -58,7 +58,6 @@ namespace main.tests
             Assert.Equal(TokenType.EOF, result[0].TokenType);
         }
 
-        
         [Theory]
         [InlineData("\"hello lox\"")]
         public void Scanner_ShouldCreateToken_WithValidString(string input)
@@ -106,6 +105,8 @@ namespace main.tests
         [InlineData(">=", TokenType.GREATER_EQUAL)]
         [InlineData("/", TokenType.SLASH)]
         [InlineData("2", TokenType.NUMBER)]
+        [InlineData("and", TokenType.AND)]
+        [InlineData("identi", TokenType.IDENTIFIER)]
         public void Scanner_ShouldReturnRightTokenType_WithValidData(string input, TokenType expectedTokenType)
         {
             var scanner = new Scanner(input);
