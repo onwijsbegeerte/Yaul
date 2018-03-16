@@ -128,6 +128,10 @@ namespace main
                             advance();
                         }
                     }
+                    else if (match('*'))
+                    {
+                        comment();
+                    }
                     else
                     {
                         addToken(TokenType.SLASH);
@@ -141,6 +145,7 @@ namespace main
                     break;
                 case '\n':
                     Line++;
+                    
                     break;
                 default:
                     if (char.IsDigit(c))
@@ -151,9 +156,26 @@ namespace main
                     {
                         _identifier();
                     }
-
                     ErrorLogger.Error(Line, "Unexpected character.");
+                    
                     break;
+            }
+        }
+
+        private void comment()
+        {
+            while (peek() != '*' && peekNext() != '/')
+            {
+                advance();
+            }
+
+            if (peek() == '*' && peekNext() == '/')
+            {
+                addToken(TokenType.COMMENT, Source.Substring(Start + 2, Current - 2));
+            }
+            else
+            {
+                ErrorLogger.Error(Line, "Unterminated comment");
             }
         }
 
@@ -166,15 +188,7 @@ namespace main
             
             string text = Source.Substring(Start, Current);
 
-            Console.WriteLine(Keywords.Keys.Count);
-            if (Keywords.ContainsKey(text))
-            {
-                addToken(Keywords[text]);
-            }
-            else
-            {
-                addToken(TokenType.IDENTIFIER);
-            }
+            addToken(Keywords.ContainsKey(text) ? Keywords[text] : TokenType.IDENTIFIER);
         }
 
         private void number()
