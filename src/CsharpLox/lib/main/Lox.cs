@@ -43,6 +43,19 @@ namespace main
                 Console.WriteLine($"Failed retrieving file,{ex.Message}");
             }
         }
+        
+        public static void error(Token token, String message) {
+            if (token.TokenType == TokenType.EOF) {
+                report(token.Line, " at end", message);
+            } else {
+                report(token.Line, " at '" + token.Lexeme + "'", message);
+            }
+        }
+
+        private static void report(int line, string bla2, string bla3)
+        {
+            
+        }
 
         public void Run(string source)
         {

@@ -34,6 +34,7 @@ test_script:
   # restore packages for our unit tests
  # - cmd: dotnet restore ./tests/tests.csproj --verbosity m
   # run the unit tests (requires changing into the test directory)
+  - cmd: dotnet --version
   - cmd: cd tests
   - cmd: cd HelloYaulTests
   - cmd: dotnet test

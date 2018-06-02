@@ -22,7 +22,5 @@ namespace main
         public object Literal { get; set; }
         public string Value { get; set; }
         public int Line { get; set; }
-
-
     }
 }
