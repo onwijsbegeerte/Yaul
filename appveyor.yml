@@ -7,8 +7,8 @@ init:
   # Good practise, because Windows line endings are different from Unix/Linux ones
   - cmd: git config --global core.autocrlf true
 install:
-  # Download .NET Core 2.0 Preview 1 SDK and add to PATH
-  # - ps: $urlCurrent = "https://download.microsoft.com/download/0/6/5/0656B047-5F2F-4281-A851-F30776F8616D/dotnet-dev-win-x64.2.0.0-preview1-005977.zip"
+  # Download .NET Core 2.1 SDK and add to PATH
+  # - ps: $urlCurrent = "https://download.microsoft.com/download/8/8/5/88544F33-836A-49A5-8B67-451C24709A8F/dotnet-sdk-2.1.300-win-x64.zip"
   # - ps: $env:DOTNET_INSTALL_DIR = "$pwd\.dotnetsdk"
   # - ps: mkdir $env:DOTNET_INSTALL_DIR -Force | Out-Null
   # - ps: $tempFileCurrent = [System.IO.Path]::GetTempFileName()
@@ -21,12 +21,12 @@ before_build:
   # Display minimal restore text
   - cmd: dotnet restore --verbosity m
 build_script:
-  # output will be in ./src/bin/debug/netcoreapp1.1/publish
+  # output will be in ./src/bin/debug/netcoreapp2.1/publish
   - cmd: dotnet publish
 after_build:
   # For once the build has completed
 artifacts:
- - path: '\bin\Debug\netcoreapp2.0\publish'
+ - path: '\bin\Debug\netcoreapp2.1\publish'
    name: WebSite
    type: WebDeployPackage
 clone_depth: 1
