@@ -84,6 +84,16 @@ namespace main.tests
             Assert.Equal(double.Parse(input), double.Parse(result[0].Literal.ToString()));
         }
 
+        [Fact]
+        public void Scanner_ShouldExtractComment_WhenGivenCommentToken()
+        {
+            var scanner = new Scanner("/*this is a comment*/");
+
+            var result = scanner.tokens();
+            
+            Assert.Equal("this is a comment", result[0].Literal.ToString());
+        }
+        
         [Theory]
         [InlineData("(", TokenType.L_PARAM)]
         [InlineData(")", TokenType.R_PARAM)]
@@ -107,6 +117,7 @@ namespace main.tests
         [InlineData("2", TokenType.NUMBER)]
         [InlineData("and", TokenType.AND)]
         [InlineData("identi", TokenType.IDENTIFIER)]
+        [InlineData("/*this is a comment*/", TokenType.COMMENT)]
         public void Scanner_ShouldReturnRightTokenType_WithValidData(string input, TokenType expectedTokenType)
         {
             var scanner = new Scanner(input);
