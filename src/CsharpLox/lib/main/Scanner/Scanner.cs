@@ -171,7 +171,12 @@ namespace main
 
             if (peek() == '*' && peekNext() == '/')
             {
-                addToken(TokenType.COMMENT, Source.Substring(Start + 2, Current - 2));
+                var literal = Source.Substring(Start + 2, Current - 2);
+               
+                advance();
+                advance();
+                
+                addToken(TokenType.COMMENT, literal);
             }
             else
             {
